@@ -9,7 +9,7 @@ export default function Player(props) {
     }
 
     function handleChange(event) {
-		console.log("TCL: handleChange -> event", event)
+        console.log("TCL: handleChange -> event", event)
         setPlayerName(event.target.value);
     }
 
@@ -21,7 +21,7 @@ export default function Player(props) {
     }
 
     return (
-        <li>
+        <li className={props.isActive ? 'active' : null}>
             <span className="player">
                 {playerNameTag}
                 <span className="player-symbol">{props.symbol}</span>
