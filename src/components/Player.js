@@ -6,6 +6,8 @@ export default function Player(props) {
 
     function handleClick() {
         setClicked(click => !click);
+        if (clicked)
+            props.onPlayerChange(props.symbol, playerName)
     }
 
     function handleChange(event) {
